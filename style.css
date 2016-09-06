@@ -1,5 +1,17 @@
+
+html, body, div, span, ul, li, p{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border:0;
+	vertical-align: baseline;
+}
+
+a{text-decoration: none}
+*{box-sizing: border-box}
+
 body {
-	font-family: arial;
+	font: 700 13px / 20px Arial;
 	margin: 0;
 	background-color: #e8ebf1;
 }
@@ -16,27 +28,32 @@ body {
 		}
 
 	.nav {
-		margin-top: -10px;
+		margin-top: -15px;
+		vertical-align: middle
 		list-style: none;
 		float: right;
 		font-size: 30px;
+		margin-bottom: 20px
 	}
+
 		.nav li {
 			display: inline-block;
 			font-size: 13px;
-			margin-left: 10px; 
+			margin-left: 10px;
 			font-weight: 700;
 			line-height: 20px;
 		}
 			.nav li a {
+				font-weight: 800;
 				display: block;
 				color: black;
-				text-decoration: none;
 				padding: 20px 10px;
+				transition: padding .5s;
 			}
-			.nav li a:hover {
-				padding-top: 5px;
-				padding-bottom: 5px;
+			.nav > li:hover > a {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				margin-top: -3px;
 				border-top: 3px solid #2aacc8;
 				color: #2aacc8;
 				background-color: white;
@@ -47,23 +64,23 @@ body {
 
 		ul.subnav {
 			display: none;
-		    position: absolute;
-		    width: 200px;
-		    top: 30px;
-		    left: inherit;
-		    font-size: 13px;
-		    font-weight: 700;
+			position: absolute;
+			width: 200px;
+			top: 30px;
+			left: inherit;
+			font-size: 13px;
+			font-weight: 700;
 			line-height: 20px;
-		    background-color: white;
-		   }
+			background-color: white;
+		}
 
 					ul.subnav > li {
-					    display: block;
-					    border-bottom: 1px solid lightgray;
+						display: block;
+						border-bottom: 1px solid lightgray;
 					}
 
 					ul.subnav > li .smiley {
-					    border-radius: 1em;
+					border-radius: 1em;
 					-webkit-box-shadow: 0 0 0 .4em #2C2C2C, inset 0 0 0 .1em #2C2C2C;
 					box-shadow: 0 0 0 .4em #2C2C2C, inset 0 0 0 .1em #2C2C2C;
 					height: 2em;
@@ -71,7 +88,7 @@ body {
 					width: 2em;
 					margin-top: 0.3em;
 					}
-					 
+
 					.smiley::after, .smiley::before {
 						background-image: -ms-radial-gradient(transparent 35%, #2C2C2C 35%);
 						background-image: -webkit-radial-gradient(transparent 35%, #2C2C2C 35%);
@@ -84,12 +101,12 @@ body {
 						top: 0;
 						width: 1em;
 					}
-					 
+
 					.smiley:after {
 					    border-radius: 1em 0 0 0;
 					    left: 0;
 					}
-					 
+
 					.smiley:before {
 					    border-radius: 0 1em 0 0;
 					    right: 0;
@@ -99,19 +116,19 @@ body {
 					ul.subnav > li > a {
 					    display: block;
 					    padding: 10px;
-					    text-decoration: none;
-					    
+
 					}
-					ul.subnav > li > a:hover {
+					ul.subnav > li:hover > a {
 					    border-top: none;
 					    color:  #2aacc8;
 					    padding: 10px;
+						margin-top: 0;
 					}
 
 						ul.nav > li:hover > ul.subnav {
 						    display: block;
 						  	z-index: 1;
-						  	border-bottom: 3px solid #2aacc8;
+						  	/*border-bottom: 3px solid #2aacc8;*/
 						}
 		.downarrow:after {
 			content: "\25be";
@@ -120,13 +137,13 @@ body {
 			outline-width: 700;
 			padding-left: 10px;
 			padding-bottom: 20px;
-		} 
+		}
 
 	.logotype {
 		margin-top: 40px;
 		font-size: 50px;
 		line-height: 20px;
-		font-family: Lato;
+		font-family: 'Lato', sans-serif;
 		font-weight: 900;
 		color: black;
 	}
@@ -134,7 +151,7 @@ body {
 span {
 	color: #2aacc8;
 	font-weight: 400;
-	vertical-align: top;
+	vertical-align:baseline;
 }
 
 	.foil {
@@ -148,6 +165,7 @@ span {
 				display: block;
 				margin: 0 auto;
 				max-width: 1000px;
+				padding-left: 60px;
 			}
 			.foil ul {
 				text-align: center;
@@ -171,14 +189,17 @@ span {
 			}
 
 			.next {
-				padding: 30px;
+				padding: 30px 0;
 			}
 
 			.next > div  {
 				display: inline-block;
-				width: 23%;
-				margin: 5px;
-				vertical-align: top;
+				width: 24%;
+				vertical-align:middle;
+				padding-left: 20px
+			}
+			.next > div:first-child{
+				padding-left: 0;
 			}
 
 			.next h6 {
@@ -186,6 +207,7 @@ span {
 				font-weight: 700;
 				line-height: 20px;
 				text-transform: uppercase;
+				vertical-align:middle;
 			}
 
 			.next h6:before {
@@ -197,8 +219,8 @@ span {
 				border-radius: 50%;
 				background-position: center;
 				margin-right: 5%;
-				vertical-align: top;
-				margin-bottom: 5%;
+				vertical-align:middle;
+				margin-bottom: 3%;
 			}
 
 			h6.pencil:before {
@@ -219,7 +241,7 @@ span {
 				background-image: url(img/airplane.png);
 				background-repeat: no-repeat;
 			}
-			
+
 
 		.next p {
 			font-size: 13px;
@@ -233,6 +255,7 @@ span {
 
 		.next a {
 			color: #2aacc8;
+			text-transform: capitalize;
 		}
 
 		.next a:before {
@@ -241,48 +264,57 @@ span {
 			color: black;
 			clear: both;
 			padding-right: 10px;
-		} 
+		}
 
 	.main {
 		background-color: white;
 		max-width: 100%;
 		padding-bottom: 30px;
+		font-size: 15px;
+		font-weight: 700;
 	}
 
 	.latest {
 		max-width: 1000px;
 		margin: 0 auto;
 		position: relative;
-		padding: 15px 0;
+		padding:  20px 0;
+		clear: both
 	}
 
 		.latest ul {
 			float: right;
+			margin-top: 0
 		}
 
 			.latest li {
 			display: inline-block;
-			height: 15px;
-			width: 15px;
-			background-color: #2aacc8;
+			height: 20px;
+			width: 20px;
+			background-color: #81e4ed;
 			border-radius: 50%;
 			font-weight: 700;
-			margin: 5px; 
+			margin: 5px;
 			text-align: center;
+			color:#434343;
+			font-size: 11px
 			}
 			.latest h6:before {
 				content: "";
 				display: inline-block;
 				width: 50px;
-				height: 20px;
+				height: 30px;
 				background-image: url(img/pointer.png);
 				background-repeat: no-repeat;
 				clear: both;
+				vertical-align: bottom;
+				margin-bottom:-5px
 				}
 
 			.latest h6 {
 				width: 200px;
 				display: inline;
+				font-size: 15px;
 			}
 
 		.pic {
@@ -292,6 +324,10 @@ span {
 		.gallery {
 			display: inline-block;
 			position: relative;
+			margin-right: 35px
+		}
+		.gallery:last-child{
+			margin-right: 0
 		}
 			.gallery img {
 				width: 100%;
@@ -314,16 +350,16 @@ span {
 	.other a {
 		vertical-align: middle;
 	}
-	
+
 		.other a:before {
 			content: "";
 			display: inline-block;
 			width: 40px;
 			height: 40px;
-			background-repeat: no-repeat;	
+			background-repeat: no-repeat;
 			background-position: bottom;
 		}
-		
+
 			.other a:first-child:before {
 				background-image: url(img/eye.png);
 				vertical-align: middle;
@@ -337,9 +373,9 @@ span {
 hr {
 	color: lightgray;
 	max-width: 1000px;
-	margin-bottom: 10px;
+	margin:0 auto 10px;
 	}
-	
+
 	.person {
 		display: inline-block;
 		max-width: 49%;
@@ -362,8 +398,12 @@ hr {
 				height: 20px;
 				background-image: url(img/comments.png);
 				background-repeat: no-repeat;
-				clear: both;
+				vertical-align: baseline
 		}
+	.clientsicon {
+		float: right;
+		clear:both
+	}
 			.clientsicon h6:before {
 				content: "";
 				display: inline-block;
@@ -373,6 +413,9 @@ hr {
 				background-repeat: no-repeat;
 				clear: both;
 			}
+		.clientsicon img{
+			vertical-align: top
+		}
 
 		.person p {
 			font-size: 14px;
@@ -380,7 +423,7 @@ hr {
 			font-weight: 400;
 			line-height: 24px;
 			color: #363636;
-			padding: 25px 25px 0 0;
+			padding: 13px
 		}
 			.person p:last-child {
 				font-weight: 700;
@@ -393,21 +436,18 @@ hr {
 
 	.download {
 		max-width: 1000px;
-		height: 140px;
 		background-color: #e8fcfe;
 		border: 1px solid #81e4ed;
 		margin: 0 auto;
+		padding: 30px;
 	}
 		.download p {
 			width: 607px;
-			height: 68px;
 			color: #363636;
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 26px;
 			display: inline-block;
-			padding: 30px;
-
 		}
 
 		.download b {
@@ -420,12 +460,13 @@ hr {
 			padding: 0px;
 			width: 240px;
 			height: 60px;
-			vertical-align: middle;
 			background-color: #2aacc8;
 			background-image: linear-gradient(to top, #2aacc8 0%, #2aacc8 0%, #60cede 15%, #72dae6 50%, #81e4ed 100%);
 			border: 1px solid #2aacc8;
 			border-radius: 8px;
 			box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.1), 0 2px 3px rgba(0, 0, 0, 0.2);
+			float: right;
+			margin-top:10px 
 		}
 
 		.download b:before {
@@ -446,7 +487,7 @@ hr {
 		}
 
 footer {
-	text-align: justify;
+	text-align: left;
 }
 
 	footer > div {
@@ -493,7 +534,7 @@ footer {
 
 	footer > div > ul > li > a {
 		line-height: 26px;
-		text-decoration: none;
+		
 		color: #363636;
 		font-size: 14px;
 		font-weight: 400;
@@ -502,6 +543,7 @@ footer {
 	footer > div > a {
 		font-size: 70px;
 		line-height: 0.8;
+		margin-left: 15px;
 	}
 
 .finish {
